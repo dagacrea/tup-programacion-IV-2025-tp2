@@ -1,0 +1,25 @@
+{
+  "name": "tup-programacion-iv-2025-tp2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=.env --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dagacrea/tup-programacion-IV-2025-tp2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dagacrea/tup-programacion-IV-2025-tp2/issues"
+  },
+  "homepage": "https://github.com/dagacrea/tup-programacion-IV-2025-tp2#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "mysql2": "^3.15.1"
+  }
+}
