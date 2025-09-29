@@ -39,10 +39,12 @@ PUT {{url}}/alumnos/10
 Content-Type: application/json
 
 {
-  "nombre": "Banana",
-  "categoriaId": 5,
-  "cantidad": 30,
-  "precio": 9
+  "nombre": "Kiwi",
+    "apellido":"gallardo",
+    "materia":"programacion",
+    "nota1":10,
+    "nota2":10,
+    "nota3":10
 }
 
 ### Quitar producto

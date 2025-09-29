@@ -8,9 +8,7 @@ const router = express.Router();
 // Validaciones
 const validarFiltros = [
     query("nombre").isAlpha("es-ES").optional(),
-     query("apellido").isAlpha("es-ES").optional(),
-
-       
+     query("apellido").isAlpha("es-ES").optional(),       
 ]
 
 const validarAlumno = [
@@ -101,16 +99,16 @@ router.put(
         const id = Number(req.params.id);
 
         // Obtengo body
-        const { nombre, apellido } = req.body;
+        const { nombre, apellido,materia,nota1,nota2,nota3 } = req.body;
 
         await db.execute(
-            "UPDATE alumnos SET nombre=?, apellido=? WHERE idalumno=?",
-            [nombre, apellido]
+            "UPDATE alumnos SET nombre=?, apellido=?, materia=?, nota1, nota2, nota3, WHERE idalumno=?",
+            [nombre, apellido,materia,nota1,nota2,nota3]
         );
 
         res.json({
             success: true,
-            data: { id, nombre, apellido },
+            data: { id, nombre, apellido, materia, nota1,nota2,nota3 },
         });
     }
 );
@@ -120,7 +118,7 @@ router.delete("/:id", validarId, verificarValidaciones, async (req, res) => {
     // Obtengo id
     const id = Number(req.params.id);
 
-    await db.execute("DELETE FROM alumnos WHERE idalumno=?", [id]);
+    await db.execute("DELETE FROM alumno WHERE idalumno=?", [id]);
     res.json({ success: true, data: id });
 });
 

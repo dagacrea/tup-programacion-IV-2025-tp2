@@ -1,0 +1,13 @@
+@url=http://localhost:3000
+### listado de rectangulos
+GET {{url}}/rectangulos
+
+### rectangulo id
+GET {{url}}/rectangulo/1
+### crear rectangulo
+POST {{url}}/rectangulo
+Content-Type: application/json
+{
+    "base":12,
+    "altura":6
+}
