@@ -1,0 +1,49 @@
+@url=http://localhost:3000
+
+### Listado de alumnos
+GET {{url}}/alumnos
+
+### Listado de alumnos con filtro de producto
+GET {{url}}/alumnos?nombre=a
+
+### Listado de alumnos con filtro de precio minimo
+GET {{url}}/alumnos?cantidadMin=5
+
+### Listado de alumnos con filtro de precio minimo y maximo
+GET {{url}}/alumnos?cantidadMin=5&cantidadMax=10
+
+### Listado de alumnos con filtro de producto y precio minimo
+GET {{url}}/alumnos?nombre=a&cantidadMin=5
+
+### Listado de alumnos con filtro de precio minimo y producto
+GET {{url}}/alumnos?cantidadMin=5&nombre=a
+
+### Detalles de producto
+GET {{url}}/alumnos/1
+
+### Crear producto
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+    "nombre": "Kiwi",
+    "apellido":"gallardo",
+    "materia":"programacion",
+    "nota1":10,
+    "nota2":10,
+    "nota3":10
+    }
+
+### Modificar producto
+PUT {{url}}/alumnos/10
+Content-Type: application/json
+
+{
+  "nombre": "Banana",
+  "categoriaId": 5,
+  "cantidad": 30,
+  "precio": 9
+}
+
+### Quitar producto
+DELETE {{url}}/alumnos/5
